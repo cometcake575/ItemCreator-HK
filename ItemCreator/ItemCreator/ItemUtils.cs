@@ -126,7 +126,8 @@ public static class ItemUtils
             var fir = fsm.AddState("Focus Item R");
             var fiu = fsm.AddState("Focus Item U");
             var fid = fsm.AddState("Focus Item D");
-            
+
+            var cursorUpdateId = 0;
             var fi = fsm.AddState("Focus Item");
             fi.AddCustomAction(() =>
             {
@@ -234,6 +235,8 @@ public static class ItemUtils
                 convoName.Value = itemName.Value = $"INV_NAME_{id}";
                 convoDesc.Value = $"INV_DESC_{id}";
 
+                cursorUpdateId++;
+                var cacheId = cursorUpdateId;
                 if (skip) uc.SendEvent("UPDATE CURSOR");
                 else fsm.StartCoroutine(UpdateCursorLater());
                 
@@ -242,6 +245,7 @@ public static class ItemUtils
                 IEnumerator UpdateCursorLater()
                 {
                     yield return new WaitForSeconds(0.15f);
+                    if (cursorUpdateId != cacheId) yield break;
                     uc.SendEvent("UPDATE CURSOR");
                 }
             });
