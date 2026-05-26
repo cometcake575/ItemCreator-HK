@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemCreator", "ItemCreator\ItemCreator\ItemCreator.csproj", "{F7E4B1E0-A1FF-4EE3-8D0E-B9D334890BBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7E4B1E0-A1FF-4EE3-8D0E-B9D334890BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E4B1E0-A1FF-4EE3-8D0E-B9D334890BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E4B1E0-A1FF-4EE3-8D0E-B9D334890BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E4B1E0-A1FF-4EE3-8D0E-B9D334890BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
