@@ -237,8 +237,9 @@ public static class ItemUtils
 
                 cursorUpdateId++;
                 var cacheId = cursorUpdateId;
+                ut.SendEvent("UPDATE TEXT");
                 if (skip) uc.SendEvent("UPDATE CURSOR");
-                else fsm.StartCoroutine(UpdateCursorLater());
+                else _icm.StartCoroutine(UpdateCursorLater());
                 
                 return;
 
